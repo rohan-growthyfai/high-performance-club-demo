@@ -4,7 +4,7 @@
   "private": true,
   "description": "A simple landing page about tiny high-performance habits.",
   "scripts": {
-    "build": "node scripts/generate-hero.js && rm -rf dist && mkdir -p dist && cp index.html styles.css script.js dist/ && cp -R assets dist/assets",
+    "build": "node scripts/generate-hero.js && rm -rf dist && mkdir -p dist && cp ./*.html styles.css script.js dist/ && cp -R assets dist/assets",
     "deploy:cloudflare": "npm run build && npx wrangler pages deploy dist --project-name micro-momentum-landing --branch main",
     "dev": "python3 -m http.server 4173",
     "preview": "python3 -m http.server 4173 -d dist"
